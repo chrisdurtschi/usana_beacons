@@ -1,3 +1,5 @@
+var RecordModel = require("../models/recordmodel");
+
 var appRouter = function(app) {
   app.get("/api/getAll", function(req, res) {
     RecordModel.getAll(function(error, result) {
