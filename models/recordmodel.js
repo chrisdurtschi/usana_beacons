@@ -8,7 +8,7 @@ function RecordModel() { };
 module.exports = RecordModel;
 
 RecordModel.getAll = function(callback) {
-  var query = ViewQuery.from('beacons', 'newestBeaconPings');
+  var query = ViewQuery.from('app', 'newestBeaconPings');
   db.query(query, function(error, result) {
     if(error) {
       return callback(error, null);
